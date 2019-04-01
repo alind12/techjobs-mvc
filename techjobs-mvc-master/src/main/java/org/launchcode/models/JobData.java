@@ -144,13 +144,13 @@ public class JobData {
 
             // Put the records into a more friendly format
             for (CSVRecord record : records) {
-                HashMap<String, String> newJob = new HashMap<>();
+                HashMap<String, String> NewJobs = new HashMap<>();
 
                 for (String headerLabel : headers) {
-                    newJob.put(headerLabel, record.get(headerLabel));
+                    NewJobs.put(headerLabel, record.get(headerLabel));
                 }
 
-                allJobs.add(newJob);
+                allJobs.add(NewJobs);
             }
 
             // flag the data as loaded, so we don't do it twice
